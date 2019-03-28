@@ -3,7 +3,7 @@ library(rvest)
 library(stringr)
 
 
-fctables_wbpg <- read_html("StokeTM.html")
+fctables_wbpg <- read_html("Stoke.html")
 
 ### players names ###
 PlayerNames <- fctables_wbpg %>%

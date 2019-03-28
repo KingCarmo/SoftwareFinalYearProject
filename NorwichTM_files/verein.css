@@ -1,0 +1,10 @@
+#main .dataHeader.nationalmannschaft.wm18 .dataMain {
+  background-color: #1a3151;
+  background-image: url("https://tmsi.akamaized.net/wettbewerb/WM18/genetic_blu.jpg");
+  background-size: 100%; }
+  #main .dataHeader.nationalmannschaft.wm18 .dataMain .dataTop {
+    background: none; }
+    #main .dataHeader.nationalmannschaft.wm18 .dataMain .dataTop .dataName h1[itemprop="name"] b {
+      color: #fff; }
+
+/*# sourceMappingURL=verein.css.map */

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1553803568040.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9E183698",
+    "lastKnownWriteTime" : 32932997484183620,
+    "last_content_update" : 1553803568040,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "FB64EC34",
+        "caption" : "NorwichTM",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=NorwichTM&cache_key=FB64EC34",
+        "displayedObservations" : 24,
+        "environment" : "",
+        "object" : "NorwichTM",
+        "preview" : 0,
+        "totalObservations" : 24,
+        "variables" : 5
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

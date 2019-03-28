@@ -12,15 +12,15 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "22B98711",
+        "cacheKey" : "3D6E1729",
         "caption" : "StokeTM",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=StokeTM&cache_key=22B98711",
-        "displayedObservations" : 23,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=StokeTM&cache_key=3D6E1729",
+        "displayedObservations" : "23",
         "environment" : "",
         "object" : "StokeTM",
-        "preview" : 0,
-        "totalObservations" : 23,
-        "variables" : 4
+        "preview" : "0",
+        "totalObservations" : "23",
+        "variables" : "5"
     },
     "relative_order" : 8,
     "source_on_save" : false,

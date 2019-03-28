@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1553798921631.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9FE65805",
+    "lastKnownWriteTime" : 1553803513,
+    "last_content_update" : 1553803513202,
+    "path" : "~/GitHub/SoftwareFinalYearProject/NorwichMarketValue.R",
+    "project_path" : "NorwichMarketValue.R",
+    "properties" : {
+        "cursorPosition" : "48,0",
+        "scrollLine" : "26",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
