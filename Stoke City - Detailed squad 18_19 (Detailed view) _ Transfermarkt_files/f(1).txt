@@ -1,0 +1,1 @@
+googletag.impl.pubads.callbackProxy2([{"/58778164/TM_Desktop_Skyscraper_300x600":{"_type_":"html","_expandable_":false,"_afc_expandable_":false,"_html_":"","_snippet_":false,"_height_":600,"_width_":160,"_empty_":true,"_is_afc_":false,"_is_3pas_":false,"_a_exps_":[21063314],"_pvtoken_":"","_qqid_":"CO7i7ceBo-ECFU2I7QodaxwM6A","_pvtoken_lifetime_":-1}}]);

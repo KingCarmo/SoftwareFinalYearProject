@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1553786154185.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9D4942F5",
+    "lastKnownWriteTime" : 287948901175001088,
+    "last_content_update" : 1553786154185,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "81e51f9df26c4949be709d4e1eea4c90",
+        "name" : "PlayerCountry",
+        "title" : "PlayerCountry"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}
