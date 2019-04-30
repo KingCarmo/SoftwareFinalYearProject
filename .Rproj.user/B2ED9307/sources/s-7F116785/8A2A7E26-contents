@@ -1,0 +1,92 @@
+##################### Linear Regression ############################
+
+install.packages("ISLR")
+library(ISLR)
+credit <- Credit
+?Credit
+str(credit)
+
+# check for missing data
+sapply(credit, FUN=function(x) {sum(is.na(x))})
+
+
+
+# Model Evaluation
+
+# Going with our holdout set
+# pick 75% of row indexes (i.e. row numbers)
+index <- sample(1:nrow(credit), nrow(credit)*.75, replace=FALSE)
+
+#those chosen, put in the training data frame
+training <- credit[index, ]
+
+#those not chosen, put in the testing data frame
+testing <- credit[-index, ]
+
+
+getPerformanceData <- function(model, testingSample) 
+{
+  # instrument the predictions
+  yHat <- predict(model, newdata=testingSample)
+  
+  # calculate the measures of test performance
+  MAE <- mean(abs(testingSample$Balance - yHat), na.rm = TRUE)
+  MSE <- mean((testingSample$Balance - yHat)^2, na.rm = TRUE)
+  RMSE <- sqrt(MSE)
+  MAPE <- mean(abs((testingSample$Balance - yHat)/testingSample$Balance), na.rm = TRUE)
+  
+  return(data.frame(MAE, MSE, RMSE, MAPE))
+}
+
+
+
+# Multiple Linear Regression
+# Y = beta_0 + beta_1 x1 + ... + beta_n xn + err
+# balance = beta_0 + beta_1 x limit + beta_2 x income + err
+
+
+limitIncomeModel <- lm(Balance ~ Limit + Income, data=training)
+getPerformanceData(limitIncomeModel, testing)
+
+
+LIRmodel <- lm(Balance ~ Limit + Income + Rating, data=training)
+getPerformanceData(LIRmodel, testing)
+
+
+
+
+
+
+######################## C5.0 or Random Forest ####################################
+
+titanicData <- read.csv("C:/Users/afajemisin/Desktop/Modules/Advanced Data Mining H9ADM/Lectures & Labs/Week 4/titanicCleaned.csv")
+
+index <- sample(1:nrow(titanicData), nrow(titanicData) * .75, replace=FALSE)
+training <- titanicData[index, ]
+testing <- titanicData[-index, ]
+
+set.seed(18)
+
+#install.packages("C50")
+library(C50)
+
+cFifty <- C5.0(Survived~., data = training, trials=10) #Boosting: many weak learners to create a strong learner
+
+summary(cFifty)
+
+
+cFiftyPredict <- predict(cFifty, newdata = testing[,-1])
+
+caret::confusionMatrix(testing$Survived, cFiftyPredict, positive = "Yes")
+
+# Winnowing
+cFiftyWinnow <- C5.0(Survived ~ ., data = training, control = C5.0Control(winnow = TRUE))
+
+cFiftyWinnowPredict <- predict(cFiftyWinnow, newdata = testing[,-1])
+
+
+caret::confusionMatrix(testing$Survived, cFiftyWinnowPredict, positive = "Yes")
+
+
+
+

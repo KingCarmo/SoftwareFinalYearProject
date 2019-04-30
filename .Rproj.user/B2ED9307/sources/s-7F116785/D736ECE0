@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1555498202816.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D736ECE0",
+    "lastKnownWriteTime" : 1556206323,
+    "last_content_update" : 1556206323758,
+    "path" : "~/GitHub/SoftwareFinalYearProject/Prediction.R",
+    "project_path" : "Prediction.R",
+    "properties" : {
+        "cursorPosition" : "86,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
