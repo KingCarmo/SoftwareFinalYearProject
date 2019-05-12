@@ -76,11 +76,11 @@ StokeMP2 <- fctables_wbpg %>%
   html_nodes(xpath = '//*[@id="team-players"]/div/div[2]/div[2]/div/div/div[2]/div/div[6]') %>%
   html_text()
 
-StokeGoal2 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal2))
-StokeAssist2 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist2))
-StokeYC2 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC2))
-StokeRC2 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC2))
-StokeMP2 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP2))
+StokeGoal2 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal2))
+StokeAssist2 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist2))
+StokeYC2 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC2))
+StokeRC2 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC2))
+StokeMP2 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP2))
 StokeCP2 <- StokeCP1[ StokeCP1 == "foo" ] <- NA
 
 ### Benik Afobe ###
@@ -114,12 +114,12 @@ StokeCP3 <- fctables_wbpg %>%
   html_nodes(xpath = '//*[@id="team-players"]/div/div[2]/div[4]/div/div/div[2]/div/div[8]') %>%
   html_text()
 
-StokeGoal3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal3))
-StokeAssist3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist3))
-StokeYC3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC3))
-StokeRC3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC3))
-StokeMP3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP3))
-StokeCP3 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP3))
+StokeGoal3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal3))
+StokeAssist3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist3))
+StokeYC3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC3))
+StokeRC3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC3))
+StokeMP3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP3))
+StokeCP3 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP3))
 
 ### Bojan Krkic ###
 StokeGoal4 <- fctables_wbpg %>%
@@ -153,12 +153,12 @@ StokeCP4 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal4))
-StokeAssist4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist4))
-StokeYC4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC4))
-StokeRC4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC4))
-StokeMP4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP4))
-StokeCP4 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP4))
+StokeGoal4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal4))
+StokeAssist4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist4))
+StokeYC4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC4))
+StokeRC4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC4))
+StokeMP4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP4))
+StokeCP4 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP4))
 
 #Bruno Martins Indi
 StokeGoal5 <- fctables_wbpg %>%
@@ -192,12 +192,12 @@ StokeCP5 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal5))
-StokeAssist5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist5))
-StokeYC5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC5))
-StokeRC5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC5))
-StokeMP5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP5))
-StokeCP5 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP5))
+StokeGoal5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal5))
+StokeAssist5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist5))
+StokeYC5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC5))
+StokeRC5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC5))
+StokeMP5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP5))
+StokeCP5 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP5))
 
 #Charlie Adam
 StokeGoal6 <- fctables_wbpg %>%
@@ -231,12 +231,12 @@ StokeCP6 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal6))
-StokeAssist6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist6))
-StokeYC6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC6))
-StokeRC6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC6))
-StokeMP6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP6))
-StokeCP6 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP6))
+StokeGoal6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal6))
+StokeAssist6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist6))
+StokeYC6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC6))
+StokeRC6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC6))
+StokeMP6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP6))
+StokeCP6 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP6))
 
 #Danny Batth
 StokeGoal7 <- fctables_wbpg %>%
@@ -270,12 +270,12 @@ StokeCP7 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal7))
-StokeAssist7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist7))
-StokeYC7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC7))
-StokeRC7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC7))
-StokeMP7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP7))
-StokeCP7 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP7))
+StokeGoal7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal7))
+StokeAssist7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist7))
+StokeYC7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC7))
+StokeRC7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC7))
+StokeMP7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP7))
+StokeCP7 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP7))
 
 
 #Darren Fletcher
@@ -310,12 +310,12 @@ StokeCP8 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal8))
-StokeAssist8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist8))
-StokeYC8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC8))
-StokeRC8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC8))
-StokeMP8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP8))
-StokeCP8 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP8))
+StokeGoal8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal8))
+StokeAssist8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist8))
+StokeYC8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC8))
+StokeRC8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC8))
+StokeMP8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP8))
+StokeCP8 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP8))
 
 
 #Jack Butland
@@ -416,12 +416,12 @@ StokeCP11 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal11))
-StokeAssist11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist11))
-StokeYC11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC11))
-StokeRC11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC11))
-StokeMP11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP11))
-StokeCP11 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP11))
+StokeGoal11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal11))
+StokeAssist11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist11))
+StokeYC11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC11))
+StokeRC11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC11))
+StokeMP11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP11))
+StokeCP11 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP11))
 
 
 #Joe Allen
@@ -456,12 +456,12 @@ StokeCP12 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal12))
-StokeAssist12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist12))
-StokeYC12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC12))
-StokeRC12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC12))
-StokeMP12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP12))
-StokeCP12 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP12))
+StokeGoal12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal12))
+StokeAssist12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist12))
+StokeYC12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC12))
+StokeRC12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC12))
+StokeMP12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP12))
+StokeCP12 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP12))
 
 
 #Josh Tymon
@@ -491,11 +491,11 @@ StokeMP13 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal13 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal13))
+StokeGoal13 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal13))
 StokeAssist13 <- StokeAssist11[ StokeAssist11 == "foo" ] <- 0
-StokeYC13 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC13))
-StokeRC13 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC13))
-StokeMP13 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP13))
+StokeYC13 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC13))
+StokeRC13 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC13))
+StokeMP13 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP13))
 
 #Mame Biram Diouf
 StokeGoal14 <- fctables_wbpg %>%
@@ -523,11 +523,11 @@ StokeMP14 <- fctables_wbpg %>%
   html_nodes(xpath = '//*[@id="team-players"]/div/div[2]/div[23]/div/div/div[2]/div/div[6]') %>%
   html_text()
 
-StokeGoal14 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal14))
-StokeAssist14 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist14))
-StokeYC14 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC14))
-StokeRC14 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC14))
-StokeMP14 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP14))
+StokeGoal14 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal14))
+StokeAssist14 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist14))
+StokeYC14 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC14))
+StokeRC14 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC14))
+StokeMP14 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP14))
 
 #Ryan Shawcross
 StokeGoal15 <- fctables_wbpg %>%
@@ -555,11 +555,11 @@ StokeMP15 <- fctables_wbpg %>%
   html_nodes(xpath = '//*[@id="team-players"]/div/div[2]/div[29]/div/div/div[2]/div/div[6]') %>%
   html_text()
 
-StokeGoal15 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal15))
-StokeAssist15 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist15))
-StokeYC15 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC15))
-StokeRC15 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC15))
-StokeMP15 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP15))
+StokeGoal15 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal15))
+StokeAssist15 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist15))
+StokeYC15 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC15))
+StokeRC15 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC15))
+StokeMP15 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP15))
 
 
 #Thomas Ince
@@ -594,12 +594,12 @@ StokeCP16 <- fctables_wbpg %>%
   html_text()
 
 
-StokeGoal16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeGoal16))
-StokeAssist16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeAssist16))
-StokeYC16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeYC16))
-StokeRC16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeRC16))
-StokeMP16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeMP16))
-StokeCP16 <-as.numeric(gsub("([0-9]+).*$", "\\1", StokeCP16))
+StokeGoal16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeGoal16))
+StokeAssist16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeAssist16))
+StokeYC16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeYC16))
+StokeRC16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeRC16))
+StokeMP16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeMP16))
+StokeCP16 <-as.integer(gsub("([0-9]+).*$", "\\1", StokeCP16))
 
 ########## Remove Certain Rows From Stoke Dataset #############
 Stoke <- data.frame(PlayerNames)
@@ -864,23 +864,22 @@ getPerformanceData(LIRmodelTrain, training)
 summary(LIRmodelTrain)
 training$Predicted <- predict(LIRmodelTrain)
 
+
 #### Combined Predicted Values ####
 StokeCity <- merge(testing, training, all = T)
-
-##### Removing Rows ####
-StokeCity <- StokeCity[-c(9, 13, 11, 21, 16, 22, 10), ]
 
 #### Fixing Columns ####
 Stoke <- Stoke[order(Stoke$Stoke),]
 StokeCity <- StokeCity[order(StokeCity$PlayerName),]
 
+##### Removing Rows ####
+StokeCity <- StokeCity[-c(15, 16, 18, 19, 20, 21, 22), ]
+
 
 #### Binding Both Values and Football Data + More Fixes ####
 StokeCityFC <- cbind(Stoke, StokeCity)
-StokeCityFC <- StokeCityFC[ -c(1) ]
-StokeCityFC <- StokeCityFC[c(6,1,2,3,4,5,7,8,9,10,11,12,13)]
-
-
+StokeCityFC <- StokeCityFC[ -c(7) ]
+StokeCityFC <- StokeCityFC[c(1,7,8,2,3,4,5,6,9,10,11,12,13,14)]
 
 ######################### Norwich #######################
 fctables_wbpg <- read_html("Norwich.html")
@@ -1725,3 +1724,5 @@ NorwichCity <- NorwichCity[order(NorwichCity$PlayerName),]
 NorwichCityFC <- cbind(Norwich, NorwichCity)
 NorwichCityFC <- NorwichCityFC[ -c(1) ]
 NorwichCityFC <- NorwichCityFC[c(6,1,2,3,4,5,7,8,9,10,11,12,13)]
+
+write.csv(NorwichCityFC, file ="NorwichTest.csv" )
