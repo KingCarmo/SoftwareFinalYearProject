@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556985870836.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3EFF10AD",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1556985870836,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "11820803",
+        "caption" : "StokeCityFC",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=StokeCityFC&cache_key=11820803",
+        "displayedObservations" : 16,
+        "environment" : "",
+        "object" : "StokeCityFC",
+        "preview" : 0,
+        "totalObservations" : 16,
+        "variables" : 13
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,18 +1,21 @@
 .werbung {
   position: relative;
   text-align: center;
-  max-width: none; }
+  max-width: none;
+  z-index: 9990; }
 
 .werbung_wetten {
   padding: 10px; }
 
-.werbung object, .werbung embed {
+.werbung object,
+.werbung embed {
   max-width: none !important; }
 
 #werbung_superbanner {
   max-width: 1034px;
   position: relative;
-  margin: auto; }
+  margin: auto;
+  z-index: 9990; }
 
 .werbung-skyscraper-container {
   position: absolute;
@@ -47,18 +50,21 @@
 .werbung-textlink {
   margin-top: 10px; }
 
-.werbung-rectangle1, .werbung-rectangle2 {
+.werbung-rectangle1,
+.werbung-rectangle2 {
   margin-top: 10px;
   border: 1px solid #ddd;
   background-color: #fff;
   padding: 10px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-bottom: 10px; }
 
 .werbung_superbanner-minheight {
   min-height: 90px;
   background-color: #ccc; }
 
-.box > .werbung-rectangle1, .box > .werbung-rectangle2 {
+.box > .werbung-rectangle1,
+.box > .werbung-rectangle2 {
   margin: 0;
   border: 0;
   text-align: center; }
@@ -67,7 +73,8 @@
   clear: both; }
 
 @media only screen and (max-width: 767px) {
-  .werbung-rectangle1, .werbung-rectangle2 {
+  .werbung-rectangle1,
+  .werbung-rectangle2 {
     padding: 0;
     border: 0;
     background-color: transparent; }

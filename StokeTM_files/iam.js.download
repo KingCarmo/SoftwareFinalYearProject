@@ -6,11 +6,15 @@ var iom = iom || (function () {
       baseUrlLSO = "de.ioam.de/aid.io",
       optinUrl = "de.ioam.de/optin.php?re=",
       qdsUrl = "irqs.ioam.de",
+      deBaseUrl = ".ioam.de/tx.io",
+      deBaseUrlLSO = ".ioam.de/aid.io",
+      deOptinUrl = ".ioam.de/optin.php?re=",
+      deSubdomain = ["imarex"],
       cntBaseUrl = ".iocnt.net/tx.io",
       cntBaseUrlLSO = ".iocnt.net/aid.io",
       cntOptinUrl = ".iocnt.net/optin.php?re=",
       cntQdsUrl = "irqs.iocnt.net",
-      cntSubdomain = ["at", "imarex"],
+      cntSubdomain = ["at"],
       eventList = ["", "inst", "init","open", "clse", "play", "resm", "stop", "fowa", "bakw", "recd", "paus", "forg", "bakg", "dele", "refr", "kill", "view", "alve", "fini", "mute", "aforg", "abakg", "aclse", "sple", "scvl", "serr", "spyr", "smdr", "sfpl", "sfqt", "ssqt", "stqt", "soqt", "sofc", "scfc", "scqt", "splr", "spli", "sprs", "spre", "smrs", "smre", "sors", "sore", "sack", "sapl", "sapa", "snsp"],
       LSOBlacklist = [],
       checkEvents = 1,
@@ -26,7 +30,8 @@ var iom = iom || (function () {
       nt = 2,
       cookiewhitelist = [],
       cookieName = "ioam2018",
-      socioToken = "b9a33403f55c9bc0bdce32109c5f5e63",
+      cookieMaxRuns = 0,
+      socioToken = "975cf36a5ccaefd142c0937fc40e7770",
       frequency = 60000,
       hbiAdShort = 5000,
       hbiAdMedium = 10000,
@@ -377,6 +382,15 @@ var iom = iom || (function () {
     return value;
   }
 
+  function transformRef(value) {
+    if (!value) value = "";
+    //value = value.replace(/[?#].*/g, "");
+    value = value.replace(/[^a-zA-Z0-9,_\/:-]+/g, ".");
+    if (value.length > 255) value = value.substr(0,254) + '+';
+    return value;
+  }
+
+
   function getRefHost() {
     var url = document.referrer.split("/");
     return (url.length >= 3) ? url[2] : "";
@@ -387,7 +401,7 @@ var iom = iom || (function () {
     var i;
     for (i in params) {
       if (params.hasOwnProperty(i)) {
-        if (i != "cn" || (i == "cn" && arrayContains(cntSubdomain, params[i]))) {
+        if (i != "cn" || (i == "cn" && (arrayContains(deSubdomain, params[i])) || (arrayContains(cntSubdomain, params[i])))) {
           result[i] = params[i];
         }
       }
@@ -428,15 +442,15 @@ var iom = iom || (function () {
     }
     result.rf = getRefHost();
     if (!result.hasOwnProperty("sur") || (result.hasOwnProperty("sur") && result.sur != "yes")) {
-      result.r2 = document.referrer;
+      result.r2 = transformRef(document.referrer);
     }
     result.ur = document.location.host;
     result.xy = getScreen();
     result.lo = "IE/Dublin";
     result.cb = "0012";
-    result.i2 = "0012c05de5a4db9815c9bc0bd";
-    result.ep = 1579821034;
-    result.vr = "412";
+    result.i2 = "0012151f3e48d9ce65ccaefd1";
+    result.ep = 1584592291;
+    result.vr = "414";
     result.id = fingerprint();
     result.st = result.st ? result.st : dummySite;
     if (!result.hasOwnProperty("sc") || (result.hasOwnProperty("sc") && result.sc != "no")) {
@@ -450,7 +464,7 @@ var iom = iom || (function () {
 
     if (!result.hasOwnProperty("cn") && result.st.charAt(2) == "_") {
       var cn = result.st.substr(0,2);
-      if (arrayContains(cntSubdomain, cn)) {
+      if (arrayContains(deSubdomain, cn) || arrayContains(cntSubdomain, cn)) {
         result.cn = cn;
       } else {
         result.er = "E12";
@@ -475,12 +489,16 @@ var iom = iom || (function () {
       result.ev = event;
       var proto = ( window.location.protocol.slice(0,4) === 'http' ) ? window.location.protocol : "https:";
       var baseUrl = baseUrlDE;
-      if (result.cn) {
+      if (result.cn && arrayContains(deSubdomain, result.cn)) {
+        baseUrl = result.cn + deBaseUrl;
+      } else if (result.cn && arrayContains(cntSubdomain, result.cn)) {
         baseUrl = result.cn + cntBaseUrl;
       }
-      if ( !(arrayContains(LSOBlacklist, result.st)) && (((/iPhone/.test(window.navigator.userAgent) || /iPad/.test(window.navigator.userAgent)) && /Safari/.test(window.navigator.userAgent) && !(/Chrome/.test(window.navigator.userAgent))  && !(/CriOS/.test(window.navigator.userAgent))) || (/Maple_2011/.test(window.navigator.userAgent))) ) {
-        if (result.cn) {
+      if ( !(arrayContains(LSOBlacklist, result.st)) && (((/iPhone/.test(window.navigator.userAgent) || /iPad/.test(window.navigator.userAgent)) && /Safari/.test(window.navigator.userAgent) && !(/Chrome/.test(window.navigator.userAgent))  && !(/CriOS/.test(window.navigator.userAgent))) || (/Maple_201/.test(window.navigator.userAgent) || /SMART-TV/.test(window.navigator.userAgent))) ) {
+        if (result.cn && arrayContains(deSubdomain, result.cn)) {
           baseUrl = result.cn + cntBaseUrlLSO;
+        } else if (result.cn && arrayContains(cntSubdomain, result.cn)) {
+          baseUrl = result.cn + deBaseUrlLSO;
         } else {
           baseUrl = baseUrlLSO;
         }
@@ -500,7 +518,7 @@ var iom = iom || (function () {
       result.cs = hash(payLoad);
       result.url = proto + "//" + baseUrl + "?" + payLoad + "cs=" + result.cs;
       transmitData(result.url, mode);
-      if (arrayContains(['play', 'resm', 'alve', 'mute', 'sfqt', 'ssqt', 'stqt', 'sapl', 'snsp'], event) && mode === 1 && result.hasOwnProperty('hb')) {
+      if (arrayContains(['play', 'resm', 'alve', 'mute', 'sfqt', 'ssqt', 'stqt', 'sapl', 'snsp'], event) && (mode === 1 || mode === 3) && result.hasOwnProperty('hb')) {
         startHeart();
       }
       return result;
@@ -706,28 +724,41 @@ var iom = iom || (function () {
   }
 
   function getFirstPartyCookie() {
-    var cookie = document.cookie.split(";");
-    for (var i = 0; i < cookie.length; i++) {
-      if (cookie[i].match(cookieName + "=.*")) {
-        var ourcookie = cookie[i].split("=")[1];
-        if (hash(ourcookie.split("!")[0]) == ourcookie.split("!")[1]) {
-          if (!result.hasOwnProperty("i3") || !result.i3) {
-            updateFirstPartyCookie(ourcookie);
+    //FF Patch
+    try {
+      var cookie = document.cookie.split(";");
+      for (var i = 0; i < cookie.length; i++) {
+        if (cookie[i].match(cookieName + "=.*")) {
+          var ourcookie = cookie[i].split("=")[1].replace("!", ":");
+          var cookieParts = ourcookie.split(":");
+          var firstCookieParts = cookieParts.slice(0, cookieParts.length - 1).join(':');
+          var lastCookiePart = cookieParts.slice(-1).pop();
+          if (hash(firstCookieParts) === lastCookiePart) {
+            if (!result.hasOwnProperty("i3") || !result.i3) {
+              updateFirstPartyCookie(ourcookie);
+            }
+            return { 
+              cookie: ourcookie, 
+              length: cookie.length
+            };
+          } else {
+            // checksum failed, cookie not trusted, delete cookie
+            result.er = "N19";
+            try {
+              if (cookieMaxRuns < 3) {
+                cookieMaxRuns++;
+                setFirstPartyCookie(2000);
+              } else {
+                result.er = "N20";
+              }
+            } catch(e) {
+              result.er = "N20";
+            }
           }
-          return { 
-            cookie: ourcookie, 
-            length: cookie.length
-          };
-        } else {
-          // checksum failed, cookie not trusted, delete cookie
-          result.er = "N19";
-          try {
-            setFirstPartyCookie(2000);
-          } catch(e) {
-            result.er = "N20";
-          }
-        }
-      } 
+        } 
+      }
+    } catch(e) {
+      return {cookie: "nocookie", length: 0};
     }
     return {cookie: "nocookie", length: cookie.length};
   }
@@ -792,8 +823,11 @@ var iom = iom || (function () {
     var events = parseInt(cookievalue.split(":")[4]) + 1;
     var expireDate = new Date(new Date().setTime(expireValue));
     var now = new Date();
-    var cookval = cookievalue.split(":").slice(0,4).join(":") + ":" + events + ":" + now.getTime().toString();
-    cookval = cookval + "!" + hash(cookval);
+    var site = (result.st) ? result.st : "nosite";
+    var code = (result.cp) ? result.cp : (result.np) ? result.np : (result.fp) ? result.fp : "nocode";
+    var evnt = (result.ev) ? result.ev : "noevent";
+    var cookval = cookievalue.split(":").slice(0,4).join(":") + ":" + events + ":" + site + ":" + code + ":" + evnt + ":" + now.getTime().toString();
+    cookval = cookval + ":" + hash(cookval);
     document.cookie = cookieName + "=" + cookval + ";expires=" + expireDate.toUTCString() + ";" + domain + ";path=/;";
   }
 
@@ -805,13 +839,16 @@ var iom = iom || (function () {
     var expireDate = new Date(new Date().setTime(new Date().getTime()+expire));
     var setDate = new Date();
     var identifier;
+    var site = (result.st) ? result.st : "nosite";
+    var code = (result.cp) ? result.cp : (result.np) ? result.np : (result.fp) ? result.fp : "nocode";
+    var evnt = (result.ev) ? result.ev : "noevent";
     if (result.hasOwnProperty("i2")) {
       identifier = result.i2;
     } else {
       identifier = getUniqueID();
     }
-    var cookval = identifier + ":" + expireDate.getTime().toString() + ":" + setDate.getTime().toString() + ":" + domain.replace("domain=", "").replace(";", "") + ":1:" +  setDate.getTime().toString();
-    cookval = cookval + "!" + hash(cookval);
+    var cookval = identifier + ":" + expireDate.getTime().toString() + ":" + setDate.getTime().toString() + ":" + domain.replace("domain=", "").replace(";", "") + ":1:" + site + ":" + code + ":" + evnt + ":" +  setDate.getTime().toString();
+    cookval = cookval + ":" + hash(cookval);
     document.cookie = cookieName + "=" + cookval + ";expires=" + expireDate.toUTCString() + ";" + domain + ";path=/;";
     if (!checkFirstPartyCookie()) {
       // cookie not found, try it without domain

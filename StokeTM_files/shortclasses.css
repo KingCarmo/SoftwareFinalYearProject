@@ -224,3 +224,24 @@
 	flex-direction: column;
 	height: 100%;
 }
+.flex-grow-parent {
+	display: flex;
+	height: 100%;
+}
+.flex-grow-child {
+	flex-grow: 1;
+}
+.flex-flow-column-wrap-parent {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	height: 100%;
+}
+.flex-flow-column-wrap-child-33 {
+	width: 33.33%;
+	height: 33.33%;
+}

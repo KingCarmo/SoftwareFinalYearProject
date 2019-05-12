@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556983526884.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8A38B45B",
+    "lastKnownWriteTime" : 19140779460001857,
+    "last_content_update" : 1556983526884,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C6E9E14A",
+        "caption" : "Stoke",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Stoke&cache_key=C6E9E14A",
+        "displayedObservations" : "27",
+        "environment" : "",
+        "object" : "Stoke",
+        "preview" : "0",
+        "totalObservations" : "27",
+        "variables" : "1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

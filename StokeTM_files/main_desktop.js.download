@@ -48,7 +48,7 @@ function stickyNavi() {
 	$(window).on('load scroll', function () {
 		if (!main.hasClass("stickyContent")) {
 			logoBereichHoehe=$("#logobereich, #header").height();
-			werbeBereichHoehe=$("#werbung_superbanner").height();
+			werbeBereichHoehe=$("#werbung_superbanner_wrapper").height();
 			beforeNav=logoBereichHoehe+werbeBereichHoehe;
 		}
 		if (self.scrollTop()>beforeNav) {

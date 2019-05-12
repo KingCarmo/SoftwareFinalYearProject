@@ -7,17 +7,17 @@
   #main .grid-view .sort-link:after {
     position: relative;
     left: 4px;
-    content: "\2195"; }
+    content: '\2195'; }
 #main .grid-view .sort-link.asc {
   text-decoration: underline; }
   #main .grid-view .sort-link.asc:after {
-    content: "\2191";
+    content: '\2191';
     position: relative;
     left: 4px; }
 #main .grid-view .sort-link.desc {
   text-decoration: underline; }
   #main .grid-view .sort-link.desc:after {
-    content: "\2193";
+    content: '\2193';
     position: relative;
     left: 4px; }
 #main .grid-view table th {

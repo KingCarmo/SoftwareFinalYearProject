@@ -26,11 +26,12 @@
         margin: 0;
         font-family: OSB, sans-serif;
         font-size: 14px;
-        line-height: 1.0;
+        line-height: 1;
         color: #fff; }
         #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li#mobile_hauptmenu_button {
           display: none; }
-        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li > div ul li a:hover, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li > div ul li a.aktiv {
+        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li > div ul li a:hover,
+        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li > div ul li a.aktiv {
           color: #00aded; }
         #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li {
           float: left;
@@ -54,7 +55,8 @@
           border-bottom: 6px solid #1a3151;
           padding: 20px 0 14px 0;
           position: relative; }
-        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li.aktiv > a, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li:hover > a {
+        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li.aktiv > a,
+        #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte > li:hover > a {
           padding-bottom: 14px;
           border-bottom: 6px solid #00aded;
           color: #00aded;
@@ -82,7 +84,18 @@
           z-index: 9994;
           float: left;
           width: 100%; }
-          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_1, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_2, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_3, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_4, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_5, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_6, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_7, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_8, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_9, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_10, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_11, #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_12 {
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_1,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_2,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_3,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_4,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_5,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_6,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_7,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_8,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_9,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_10,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_11,
+          #main .navihalter .page_wrapper .megamenu_container.megamenu_dark_bar.megamenu_dark ul#hauptmenuepunkte li .dropdown_fullwidth .col_12 {
             float: left;
             display: inline;
             position: relative;
@@ -167,8 +180,9 @@
       #main .subnavi #subnavigation nav ul#submenu > li {
         float: left;
         margin: 0;
-        padding: 0 .5%; }
-        #main .subnavi #subnavigation nav ul#submenu > li .gasthinweis ul li, #main .subnavi #subnavigation nav ul#submenu > li .gasthinweis span.oberpunkt {
+        padding: 0 0.5%; }
+        #main .subnavi #subnavigation nav ul#submenu > li .gasthinweis ul li,
+        #main .subnavi #subnavigation nav ul#submenu > li .gasthinweis span.oberpunkt {
           opacity: 0.4; }
         #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth {
           position: absolute;
@@ -188,7 +202,18 @@
           background: #1a3151;
           color: #fff;
           width: calc(100% - 10px); }
-          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_1, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_2, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_3, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_4, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_5, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_6, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_7, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_8, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_9, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_10, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_11, #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_12 {
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_1,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_2,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_3,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_4,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_5,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_6,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_7,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_8,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_9,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_10,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_11,
+          #main .subnavi #subnavigation nav ul#submenu > li .dropdown_fullwidth .col_12 {
             float: left;
             display: inline;
             position: relative;
@@ -265,7 +290,7 @@
           text-decoration: none;
           display: block;
           padding: 0;
-          letter-spacing: .8px;
+          letter-spacing: 0.8px;
           line-height: 60px;
           padding: 0 3px;
           text-transform: uppercase;
@@ -277,9 +302,11 @@
           background: url(/images/dropdown.png) no-repeat right 26px; }
       #main .subnavi #subnavigation nav ul#submenu > li:not(:hover) .dropdown_fullwidth {
         transform: translateY(-9999em); }
-      #main .subnavi #subnavigation nav ul#submenu > li:hover, #main .subnavi #subnavigation nav ul#submenu li.pseudohover {
+      #main .subnavi #subnavigation nav ul#submenu > li:hover,
+      #main .subnavi #subnavigation nav ul#submenu li.pseudohover {
         background-color: #1a3151; }
-        #main .subnavi #subnavigation nav ul#submenu > li:hover .megamenu_drop, #main .subnavi #subnavigation nav ul#submenu li.pseudohover .megamenu_drop {
+        #main .subnavi #subnavigation nav ul#submenu > li:hover .megamenu_drop,
+        #main .subnavi #subnavigation nav ul#submenu li.pseudohover .megamenu_drop {
           background: url(/images/dropdown-b-up.png) no-repeat right 27px; }
       #main .subnavi #subnavigation nav ul#submenu > li.aktiv {
         background-color: #1a3151; }
@@ -289,9 +316,12 @@
         height: 60px;
         width: 60px;
         overflow: hidden;
-        background: url(https://tmssl.akamaized.net/images/settings.png) center center no-repeat; }
+        background-image: url("https://tmsi.akamaized.net/icons/settings_white.svg");
+        background-position: center center;
+        background-size: 40px;
+        background-repeat: no-repeat; }
         #main .subnavi #subnavigation nav ul#submenu li.subnavi-edit:hover {
-          background: #1a3151 url(https://tmssl.akamaized.net/images/settings_blau.png) center center no-repeat; }
+          background-image: url("https://tmsi.akamaized.net/icons/settings_cyan.svg"); }
         #main .subnavi #subnavigation nav ul#submenu li.subnavi-edit a.megamenu_drop {
           padding-top: 40px;
           width: 70px;
@@ -326,7 +356,9 @@
     position: relative;
     top: -2px; }
 
-  span.anmelden, .sticky-suche .header-suche, .sticky-suche .header-suche-abschicken {
+  span.anmelden,
+  .sticky-suche .header-suche,
+  .sticky-suche .header-suche-abschicken {
     display: none !important; }
 
   .userbox.ub-abgemeldet > a {
@@ -400,7 +432,7 @@
       margin: 0;
       font-family: OSB, sans-serif;
       font-size: 14px;
-      line-height: 1.0;
+      line-height: 1;
       height: 44px; }
       #main .navihalter .megamenu_container.megamenu_dark_bar.megamenu_dark ul#mainmenue {
         display: block;
@@ -411,11 +443,10 @@
         margin: 0;
         font-family: OSB, sans-serif;
         font-size: 14px;
-        line-height: 1.0;
+        line-height: 1;
         height: 44px; }
         #main .navihalter .megamenu_container.megamenu_dark_bar.megamenu_dark ul#mainmenue li#mobile_hauptmenu_button ul#hauptmenuepunkte {
           transition: all 0.45s cubic-bezier(0.3, 0, 0.15, 1);
-          -ms-transform-style: preserve-3d;
           transform-style: preserve-3d;
           transform: translateX(-100%); }
         #main .navihalter .megamenu_container.megamenu_dark_bar.megamenu_dark ul#mainmenue li#mobile_hauptmenu_button {
@@ -556,7 +587,7 @@
               border-left: none;
               right: 18px; }
             #main .navihalter .megamenu_container.megamenu_dark_bar.megamenu_dark ul#mainmenue li#mobile_hauptmenu_button > ul li.megamenu_drop_list span.hauptnavi_neu {
-              font-family: "Source Sans Pro", sans-serif;
+              font-family: 'Source Sans Pro', sans-serif;
               display: inline-block;
               vertical-align: middle;
               margin-left: 10px;
@@ -618,7 +649,6 @@
           display: block; }
     #main .subnavi_box #submenu {
       transition: all 0.45s cubic-bezier(0.3, 0, 0.15, 1);
-      -ms-transform-style: preserve-3d;
       transform-style: preserve-3d;
       transform: translateX(-120%);
       top: 44px;
@@ -791,7 +821,6 @@
             #main .subnavi_box #submenu > li ul.active_submenu span:after {
               border: none; }
       #main .subnavi_box #submenu li.subnavi-edit {
-        background: none;
         height: initial;
         padding: 0 !important; }
       #main .subnavi_box #submenu li.active_submenu a:after {

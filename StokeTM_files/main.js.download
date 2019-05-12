@@ -241,16 +241,15 @@ function loadMenue() {
 }
 
 function domainSwitch() {
-    $('#domain').on('click', function (event) {
+    $('div#tm_domainswitcher').on('click', function (event) {
         event.preventDefault();
-        $('#domain').toggleClass('aktiv');
-        //_gaq.push(['_trackEvent', 'domains', 'click']);
+        $(this).toggleClass('opened');
         ga('send', 'event', 'domains', 'click');
-        var box = $('#domains');
+        var box = $('div#tm_domainswitcher_box');
         if (box.css('display') !== 'block') {
             box.slideToggle(200);
             setTimeout(function () {
-                boxOpen = '#domains';
+                boxOpen = 'div#tm_domainswitcher_box';
             }, 0);
         } else {
             box.slideToggle(200);

@@ -97,7 +97,8 @@
 
 .teilen-desktop-link.with-rss ul {
   width: 90px; }
-.teilen-desktop-link .svg-icon, .teilen-desktop-link img {
+.teilen-desktop-link .svg-icon,
+.teilen-desktop-link img {
   height: 20px;
   width: 20px; }
 
@@ -106,7 +107,8 @@
   width: 100%;
   height: 100%;
   position: relative; }
-#main #logobereich #header .header-suche, #main #logobereich #header .header-suche:focus {
+#main #logobereich #header .header-suche,
+#main #logobereich #header .header-suche:focus {
   font-family: OSL, sans-serif;
   float: right;
   margin: 0;
@@ -140,12 +142,15 @@
     background-size: 57%;
     width: 44px;
     height: 56px; }
-#main .popuphalter #profilbox, #main .popuphalter #vereinbox {
+#main .popuphalter #profilbox,
+#main .popuphalter #vereinbox {
   width: 144px; }
-#main .navihalter, #main .page_wrapper {
+#main .navihalter,
+#main .page_wrapper {
   min-height: 60px;
   position: relative; }
-  #main .navihalter .large-12:first-child, #main .page_wrapper .large-12:first-child {
+  #main .navihalter .large-12:first-child,
+  #main .page_wrapper .large-12:first-child {
     padding: 0 5px; }
 #main .navihalter:before {
   content: ' ';
@@ -165,7 +170,14 @@
   background-color: #ccc; }
 #main .sticky-logo {
   display: none; }
-#main #domains, #main #loginbox, #main #registerbox, #main #notificationsbox, #main #pnbox, #main #profilbox, #main #vereinbox, #main #passwortVergessenBox {
+#main #domains,
+#main #loginbox,
+#main #registerbox,
+#main #notificationsbox,
+#main #pnbox,
+#main #profilbox,
+#main #vereinbox,
+#main #passwortVergessenBox {
   position: absolute;
   display: none;
   top: 0px;
@@ -178,13 +190,15 @@
   -webkit-box-shadow: 0 0 3px #bbb;
   box-shadow: 0 0 3px #bbb;
   border: 0; }
-#main #registerbox, #main #notificationsbox, #main #pnbox {
+#main #registerbox,
+#main #notificationsbox,
+#main #pnbox {
   width: 484px;
   padding: 0; }
 #main #domains {
   top: 79px;
-  left: 142px;
-  width: 120px;
+  left: 168px;
+  width: 185px;
   padding: 5px;
   font-family: OSB, sans-serif; }
   #main #domains span {
@@ -192,8 +206,6 @@
     line-height: 24px; }
   #main #domains a.aktiv {
     color: #c5c5c5; }
-    #main #domains a.aktiv img {
-      margin-right: 7px; }
 #main .megamenu_dark #userprofil-box {
   position: absolute;
   top: 0;
@@ -206,7 +218,8 @@
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center; }
-  #main .megamenu_dark #userprofil-box .userbox i.fi-comment, #main .megamenu_dark #userprofil-box .userbox i.fi-megaphone {
+  #main .megamenu_dark #userprofil-box .userbox i.fi-comment,
+  #main .megamenu_dark #userprofil-box .userbox i.fi-megaphone {
     font-size: 22px;
     position: absolute;
     left: 3px;
@@ -233,7 +246,10 @@
     background: #c8102e; }
   #main .megamenu_dark #userprofil-box .userbox .header-profil-zahl.pn {
     background: #00a4e1; }
-  #main .megamenu_dark #userprofil-box .userbox .profil-pn span.header-profil-zahl, #main .megamenu_dark #userprofil-box .userbox .profil-nt span.header-profil-zahl, #main .megamenu_dark #userprofil-box .userbox .profil-zahl, #main .megamenu_dark #userprofil-box .userbox #live-counter {
+  #main .megamenu_dark #userprofil-box .userbox .profil-pn span.header-profil-zahl,
+  #main .megamenu_dark #userprofil-box .userbox .profil-nt span.header-profil-zahl,
+  #main .megamenu_dark #userprofil-box .userbox .profil-zahl,
+  #main .megamenu_dark #userprofil-box .userbox #live-counter {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -273,11 +289,14 @@
     color: #00aded; }
   #main .megamenu_dark #userprofil-box #favorit-box .profil-pn span.header-profil-zahl {
     background-color: #00a4e1; }
-  #main .megamenu_dark #userprofil-box #favorit-box .profil-nt span.header-profil-zahl, #main .megamenu_dark #userprofil-box #favorit-box .profil-zahl-bg {
+  #main .megamenu_dark #userprofil-box #favorit-box .profil-nt span.header-profil-zahl,
+  #main .megamenu_dark #userprofil-box #favorit-box .profil-zahl-bg {
     background-color: #c8102e; }
   #main .megamenu_dark #userprofil-box #favorit-box a:hover {
     text-decoration: none; }
-  #main .megamenu_dark #userprofil-box .profil-pn, #main .megamenu_dark #userprofil-box .profil-nt, #main .megamenu_dark #userprofil-box #favorit-stern {
+  #main .megamenu_dark #userprofil-box .profil-pn,
+  #main .megamenu_dark #userprofil-box .profil-nt,
+  #main .megamenu_dark #userprofil-box #favorit-stern {
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -287,20 +306,24 @@
     background-color: #fff;
     border-radius: 50%;
     margin: 0 2px; }
-  #main .megamenu_dark #userprofil-box .profil-pn .svg-icon, #main .megamenu_dark #userprofil-box .profil-pn img {
+  #main .megamenu_dark #userprofil-box .profil-pn .svg-icon,
+  #main .megamenu_dark #userprofil-box .profil-pn img {
     transform: scale(0.7);
     position: relative;
     top: 1px;
     left: 0px; }
-  #main .megamenu_dark #userprofil-box .profil-nt .svg-icon, #main .megamenu_dark #userprofil-box .profil-nt img {
+  #main .megamenu_dark #userprofil-box .profil-nt .svg-icon,
+  #main .megamenu_dark #userprofil-box .profil-nt img {
     transform: scale(1.1); }
   #main .megamenu_dark #userprofil-box #favorit-stern img {
     vertical-align: middle; }
 #main .megamenu_dark #arrow-up-xy {
   display: none; }
-#main #profilbox .profil-pn, #main #profilbox .profil-nt {
+#main #profilbox .profil-pn,
+#main #profilbox .profil-nt {
   display: none; }
-#main .userbox .profil-pn, #main .userbox .profil-nt {
+#main .userbox .profil-pn,
+#main .userbox .profil-nt {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -309,12 +332,14 @@
   background-color: #fff;
   border-radius: 50%;
   margin: 0 4px; }
-  #main .userbox .profil-pn img, #main .userbox .profil-nt img {
+  #main .userbox .profil-pn img,
+  #main .userbox .profil-nt img {
     height: auto;
     width: 25px;
     display: inline-block;
     vertical-align: middle; }
-  #main .userbox .profil-pn .header-profil-zahl, #main .userbox .profil-nt .header-profil-zahl {
+  #main .userbox .profil-pn .header-profil-zahl,
+  #main .userbox .profil-nt .header-profil-zahl {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -324,11 +349,16 @@
     color: #fff;
     text-align: center;
     line-height: 20px; }
-    #main .userbox .profil-pn .header-profil-zahl.nt, #main .userbox .profil-nt .header-profil-zahl.nt {
+    #main .userbox .profil-pn .header-profil-zahl.nt,
+    #main .userbox .profil-nt .header-profil-zahl.nt {
       background: #c8102e; }
-    #main .userbox .profil-pn .header-profil-zahl.pn, #main .userbox .profil-nt .header-profil-zahl.pn {
+    #main .userbox .profil-pn .header-profil-zahl.pn,
+    #main .userbox .profil-nt .header-profil-zahl.pn {
       background: #00a4e1; }
-  #main .userbox .profil-pn .profilmenu-pn-text, #main .userbox .profil-pn .profilmenu-nt-text, #main .userbox .profil-nt .profilmenu-pn-text, #main .userbox .profil-nt .profilmenu-nt-text {
+  #main .userbox .profil-pn .profilmenu-pn-text,
+  #main .userbox .profil-pn .profilmenu-nt-text,
+  #main .userbox .profil-nt .profilmenu-pn-text,
+  #main .userbox .profil-nt .profilmenu-nt-text {
     display: none; }
 #main .userbox .profildaten {
   display: inline-block;
@@ -342,7 +372,9 @@
     position: relative;
     transform: scale(0.8);
     border-radius: 100%; }
-#main #schnellsuche-sticky, #main .profilmenu-pn-text, #main .profilmenu-nt-text {
+#main #schnellsuche-sticky,
+#main .profilmenu-pn-text,
+#main .profilmenu-nt-text {
   display: none; }
 
 #main.stickyContent {
@@ -363,18 +395,28 @@
     position: fixed !important;
     top: -20px;
     z-index: 9999; }
-    #main.stickyContent .popuphalter #domains, #main.stickyContent .popuphalter #loginbox, #main.stickyContent .popuphalter #registerbox, #main.stickyContent .popuphalter #notificationsbox, #main.stickyContent .popuphalter #pnbox, #main.stickyContent .popuphalter #profilbox, #main.stickyContent .popuphalter #vereinbox, #main.stickyContent .popuphalter #passwortVergessenBox, #main.stickyContent .popuphalter #favorit-container {
+    #main.stickyContent .popuphalter #domains,
+    #main.stickyContent .popuphalter #loginbox,
+    #main.stickyContent .popuphalter #registerbox,
+    #main.stickyContent .popuphalter #notificationsbox,
+    #main.stickyContent .popuphalter #pnbox,
+    #main.stickyContent .popuphalter #profilbox,
+    #main.stickyContent .popuphalter #vereinbox,
+    #main.stickyContent .popuphalter #passwortVergessenBox,
+    #main.stickyContent .popuphalter #favorit-container {
       top: 60px; }
     #main.stickyContent .popuphalter #favorit-container {
       top: 60px; }
-    #main.stickyContent .popuphalter #profilbox .profil-pn, #main.stickyContent .popuphalter #profilbox .profil-nt {
+    #main.stickyContent .popuphalter #profilbox .profil-pn,
+    #main.stickyContent .popuphalter #profilbox .profil-nt {
       margin-left: 0;
       margin-bottom: 0;
       margin-right: 7px;
       position: relative;
       display: inline-block;
       height: 28px; }
-      #main.stickyContent .popuphalter #profilbox .profil-pn span.header-sprite, #main.stickyContent .popuphalter #profilbox .profil-nt span.header-sprite {
+      #main.stickyContent .popuphalter #profilbox .profil-pn span.header-sprite,
+      #main.stickyContent .popuphalter #profilbox .profil-nt span.header-sprite {
         position: absolute;
         left: 3px;
         bottom: 3px; }
@@ -383,7 +425,8 @@
     height: 40px;
     width: 40px;
     float: left; }
-    #main.stickyContent .sticky-logo .tm_svg, #main.stickyContent .sticky-logo img {
+    #main.stickyContent .sticky-logo .tm_svg,
+    #main.stickyContent .sticky-logo img {
       background-image: url(/images/TM-Logo_White.svg);
       background-repeat: no-repeat;
       background-size: 35px;
@@ -420,7 +463,8 @@
         margin: 0 10px 0 0; }
         #main.stickyContent .megamenu_dark #userprofil-box .userbox .profildaten a {
           top: 0px; }
-      #main.stickyContent .megamenu_dark #userprofil-box .profil-pn, #main.stickyContent .megamenu_dark #userprofil-box .profil-nt {
+      #main.stickyContent .megamenu_dark #userprofil-box .profil-pn,
+      #main.stickyContent .megamenu_dark #userprofil-box .profil-nt {
         display: none; }
     #main.stickyContent .megamenu_dark span.anmelden {
       display: none; }
@@ -439,7 +483,8 @@
       width: 80px;
       margin-top: 3px;
       z-index: 2; }
-      #main.stickyContent .megamenu_dark .sticky-suche .header-suche, #main.stickyContent .megamenu_dark .sticky-suche .header-suche:focus {
+      #main.stickyContent .megamenu_dark .sticky-suche .header-suche,
+      #main.stickyContent .megamenu_dark .sticky-suche .header-suche:focus {
         font-family: OSL, sans-serif;
         font-size: 15px;
         float: right;
@@ -457,9 +502,13 @@
         right: 5px;
         top: 8px;
         position: absolute; }
-  #main.stickyContent .header-pn, #main.stickyContent .header-nt, #main.stickyContent #schnellsuche {
+  #main.stickyContent .header-pn,
+  #main.stickyContent .header-nt,
+  #main.stickyContent #schnellsuche {
     display: none; }
-  #main.stickyContent .profilmenu-pn-text, #main.stickyContent .profilmenu-nt-text, #main.stickyContent #schnellsuche-sticky {
+  #main.stickyContent .profilmenu-pn-text,
+  #main.stickyContent .profilmenu-nt-text,
+  #main.stickyContent #schnellsuche-sticky {
     display: inline-block; }
 
 #main.stickySubnavigation #subnavigation {
@@ -504,7 +553,8 @@
 .subnavi-edit-sticky {
   height: 40px !important; }
 
-li:hover a.sticky-schrift, li.aktiv a.sticky-schrift {
+li:hover a.sticky-schrift,
+li.aktiv a.sticky-schrift {
   border-bottom: 3px solid #00aded;
   margin-bottom: 2px; }
 
