@@ -12,9 +12,9 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "8192AD0A",
+        "cacheKey" : "791531AC",
         "caption" : "StokeCity",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=StokeCity&cache_key=8192AD0A",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=StokeCity&cache_key=791531AC",
         "displayedObservations" : "16",
         "environment" : "",
         "object" : "StokeCity",

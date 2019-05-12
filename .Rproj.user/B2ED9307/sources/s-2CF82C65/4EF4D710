@@ -12,15 +12,15 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "3AC9C1F7",
+        "cacheKey" : "3798D5F8",
         "caption" : "Norwich",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Norwich&cache_key=3AC9C1F7",
-        "displayedObservations" : 25,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Norwich&cache_key=3798D5F8",
+        "displayedObservations" : "25",
         "environment" : "",
         "object" : "Norwich",
-        "preview" : 0,
-        "totalObservations" : 25,
-        "variables" : 1
+        "preview" : "0",
+        "totalObservations" : "25",
+        "variables" : "1"
     },
     "relative_order" : 5,
     "source_on_save" : false,

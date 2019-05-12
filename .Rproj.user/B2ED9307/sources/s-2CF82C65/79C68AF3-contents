@@ -864,6 +864,9 @@ getPerformanceData(LIRmodelTrain, training)
 summary(LIRmodelTrain)
 training$Predicted <- predict(LIRmodelTrain)
 
+#### Combined Predicted Values ####
+StokeCity <- merge(testing, training, all = T)
+
 ##### Removing Rows ####
 StokeCity <- StokeCity[-c(9, 13, 11, 21, 16, 22, 10), ]
 
@@ -1681,6 +1684,32 @@ getPerformanceData(LIRmodel, testing)
 
 summary(LIRmodel)
 testing$Predicted<- predict(LIRmodel)
+
+
+##### Train ####
+getPerformanceData <- function(model, trainingNorwichCity) 
+{
+  # instrument the predictions
+  yHat <- predict(model, newdata=trainingNorwichCity)
+  
+  # calculate the measures of test performance
+  MAE <- mean(abs(training$Value2019 - yHat), na.rm = TRUE)
+  MSE <- mean((training$Value2019 - yHat)^2, na.rm = TRUE)
+  RMSE <- sqrt(MSE)
+  MAPE <- mean(abs((training$Value2019 - yHat)/ training$Value2019), na.rm = TRUE)
+  
+  return(data.frame(MAE, MSE, RMSE, MAPE))
+}
+
+LIRmodelTrain <- lm(Value2019 ~ Value2018 + Value2017 + Value2016 + Value2015 , data=training)
+getPerformanceData(LIRmodelTrain, training)
+
+
+summary(LIRmodelTrain)
+training$Predicted <- predict(LIRmodelTrain)
+
+#### Combined Predicted Values ####
+NorwichCity <- merge(testing, training, all = T)
 
 ##### Removing Rows ####
 Norwich <- Norwich[-c( 2, 3), ]
